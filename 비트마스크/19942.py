@@ -29,14 +29,13 @@ for i in range(1 << n):
             if result_cost > cur_cost:
                 result_cost =cur_cost
                 answers = []
-                answers.append(i)
-                # answers.append(bin(i))
+                # answers.append(i)
+                answers.append(bin(i))
 
             elif result_cost == cur_cost:
-                answers.append(i)
-                # answers.append(bin(i))
+                # answers.append(i)
+                answers.append(bin(i))
 
-print(answers)
 
 if result_cost == 1e9:
     print(-1)
@@ -45,11 +44,11 @@ else:
     answers.sort()
     answer = answers[0]
     index = -1 
-    # while True:
-    #     index = answer.find('1', index +1)
-    #     if index == -1:
-    #         break
-    #     num_list.append(index)
+    while True:
+        index = answer.find('1', index +1)
+        if index == -1:
+            break
+        num_list.append(index)
 
-    # print(result_cost)
-    # print(*num_list)        
+    print(result_cost)
+    print(*num_list)        
