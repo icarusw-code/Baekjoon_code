@@ -16,6 +16,8 @@ for i in range(n):
         dp.append(arr[i])
     else:
         # 자신보다 큰 수 중 최솟값과 대치(이진탐색 이용)
+        # 10 20 30 25 50 으로 하면 이해하기 쉬움 
+        # 뒤에 더 긴 길이를 만들기위해 값을 갱신해줌
         dp[bisect_left(dp, arr[i])] = arr[i]
         
 print(len(dp))
