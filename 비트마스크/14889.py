@@ -12,6 +12,7 @@ for i in range((1<<n)):
     second = []
     # 팀을 나누는 모든 경우를 탐색
     for j in range(n):
+        # i가 j에 있는지 검사
         if (i & (1<<j)) > 0:
             first += [j]
         else:
