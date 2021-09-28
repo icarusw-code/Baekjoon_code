@@ -1,5 +1,5 @@
 import sys
-sys.setrecursionlimit(10000)
+sys.setrecursionlimit(10000) #재귀제한 높이 설정
 
 t = int(input())
 
