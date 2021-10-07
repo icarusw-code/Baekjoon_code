@@ -1,3 +1,5 @@
+# 1. 상어가 먹을 수 있는 물고기를 찾는다. (BFS 를 이용)
+# 2. 이동해서 먹는다.
 import sys
 from collections import deque
 
