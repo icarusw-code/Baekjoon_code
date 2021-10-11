@@ -1,5 +1,6 @@
 import sys
 from collections import deque
+import pprint
 
 input = sys.stdin.readline
 
@@ -16,10 +17,13 @@ dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
 
+visited = [[[0 for _ in range(k + 1)] for _ in range(w)] for _ in range(h)]
+
+
 def bfs(x, y):
     queue = deque()
+    # 나이트 처럼 움직인 횟수 k
     queue.append((x, y, k))
-    visited = [[[0 for _ in range(k + 1)] for _ in range(w)] for _ in range(h)]
     while queue:
         x, y, z = queue.popleft()
         if x == h - 1 and y == w - 1:
@@ -51,4 +55,6 @@ def bfs(x, y):
     return -1
 
 
+pprint.pprint(visited)
+pprint.pprint(board)
 print(bfs(0, 0))
